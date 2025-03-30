@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- link para as fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- link para o css/sass -->
     <link rel="stylesheet" href="styles/main.scss">
+    <title>Naruto 1.4</title>
+    <!-- configuração do setup do projeto:
+    1 - abra o terminal (F1) e exercute o "npm init --yes" para criar o package.json e pular todas as perguntas
+    2 - após, no terminal execute o "npm install --save-dev parcel" para instalação do Parcel
+    3 - Crie a pasta SRC, e dentro dela crie seu arquivo index.html
+    4 - Também dentro de SRC crie a pasta scripts e dentro dela crie o arquivo main.js
+    5 - dentro de SRC crie a pasta styles, dentro dela o arquivo main.scss
+    6 - No seu arquivo package.json, em "scripts", adicione o seguinte comando ("dev:" "parcel src/index.html src/styles/main.scss src/scripts/main.js --no-cache")
+    7 - após, no terminal, execute o comando "npm run dev"-->
 </head>
 <body>
-    
+    <!-- config. do hero e cabeçalho-->
+    <header class="hero">
+        <div class="container">
+            <img class="hero__logo" src="./images/naruto.png.png" alt="foto do Naruto">
+            <p class="hero__text">
+                Aniversário do Naruto está chegando!<br/>
+                Começa em: <span id="contador"></span>
+            </p>
+            <div class="infos-bar">
+                <ul class="infos-bar__infos">
+                    <li class="infos-bar__infos__item">
+                        <b>Localização</b>
+                        Casa do Naruto - Aldeia da folha - Japão
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Horário</b>
+                        29 Julho de 2025 - 16:00
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Trajes</b>
+                        Fantasia de Animes
+                    </li>
+                </ul>
+                <a href="#" class="button button--primary">
+                    Confirme sua presença
+                </a>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
