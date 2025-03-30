@@ -1,0 +1,68 @@
+@use 'variaveis';
+
+.event {
+    padding: 80px 0;
+
+    &--minha-ilha {
+        background-image: linear-gradient(variaveis.$blue1, variaveis.$blue2);
+    }
+
+    &--sobre-naruto {
+        background-image: linear-gradient(variaveis.$blue2, variaveis.$blue3);
+    }
+
+    &--comidas {
+        background-image: linear-gradient(variaveis.$blue3, variaveis.$blue4);
+    }
+
+    &--fantasias {
+        background-image: linear-gradient(variaveis.$blue4, variaveis.$blue3);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap; // Garante que o conteúdo não quebre em telas menores
+    }
+
+    //inverte imagem e texto para seções que precisam
+    &--image-left .container{
+        flex-direction: row-reverse;
+    }
+
+    &__image {
+        max-width: 360px;
+        flex-shrink: 0; //Evitar que a imagem diminua de tamanho inesperadamente
+    }
+
+    &__details {
+        flex: 1; //Permite que o texto ocupe mais espaço de forma equilibrada
+    
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        line-height: 22px;
+    }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin-bottom: 16px;
+        }
+    }
+}
